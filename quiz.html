@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Kapsül Kahveler</title>
+        <title>Kahve Testi</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -14,6 +14,16 @@
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Slider -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            #quiz-container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -63,76 +73,81 @@
                     </ul>
                 </div>
             </div>
-        </nav>    
+        </nav>           
         
+
         <!-- Container -->
         <section class="page-section cta">
             <div class="container mt-3 d-flex flex-wrap">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/img/kapsul0.jpg" class="img-fluid rounded thumbnail-image">
-                        </div>
-                        <div class="product-detail-container p-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="dress-name"><b>Caffe Vergnano Espresso Intenso</b></h5>
-                            </div>
-                            <p class="dress-description mt-3">
-                                Yoğun ve aromatik bir deneyim için Caffe Vergnano Espresso Intenso. Güçlü bir karakterle tanımlanan bu kahve, her fincanında zengin bir lezzet sunar.
-                            </p>
-                        </div>
-                    </div>
+                <div id="quiz-container">
+                    <h1>Kahve Bilgi Testi</h1>
+                    <p id="question"></p>
+                    <div id="options-container"></div>
+                    <button hidden class="mt-3" id="next-button">Sonraki Soru</button>
+                    <p id="score">Skor: 0</p>
                 </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/img/kapsul1.jpg" class="img-fluid rounded thumbnail-image">
-                        </div>
-                        <div class="product-detail-container p-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="dress-name"><b>Caffe Vergnano Espresso Decaf</b></h5>
-                            </div>
-                            <p class="dress-description mt-3">
-                                Kafeinsiz bir seçenek arayanlar için özel olarak hazırlanan Caffe Vergnano Espresso Decaf. Keyifli bir kahve deneyimi, kafeinsiz bir içecekle mümkün.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/img/kapsul2.jpg" class="img-fluid rounded thumbnail-image">
-                        </div>
-                        <div class="product-detail-container p-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="dress-name"><b>Caffe Vergnano Espresso Cremoso</b></h5>
-                            </div>
-                            <p class="dress-description mt-3">
-                                Kadifemsi bir dokunuşla hazırlanan Caffe Vergnano Espresso Cremoso, kahve tutkunlarına kremsi ve yoğun bir lezzet sunar.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/img/kapsul3.jpg" class="img-fluid rounded thumbnail-image">
-                        </div>
-                        <div class="product-detail-container p-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="dress-name"><b>Caffe Vergnano Espresso Arabica</b></h5>
-                            </div>
-                            <p class="dress-description mt-3">
-                                Caffe Vergnano Espresso Arabica, özenle seçilmiş Arabica çekirdekleri ile hazırlanır. Hafif asiditesi ve özel kavurma tekniği ile benzersiz bir lezzet sunar.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            
+                <script>
+                    const questions = [
+                        { question: "Kahve ağacı meyvesinin adı nedir?", options: ["Elma", "Armut", "Kiraz", "Üzüm"], correctAnswer: "Kiraz" },
+                        { question: "Kahve hangi ülkede keşfedilmiştir?", options: ["Brezilya", "Yemen", "Ethiopia", "Kolombiya"], correctAnswer: "Ethiopia" },
+                        { question: "Türk kahvesi nasıl demlenir?", options: ["Filtre kahve makinesinde", "Cezve veya ibrikte", "Espresso makinesinde", "Aeropress ile"], correctAnswer: "Cezve veya ibrikte" },
+                        { question: "Espresso nedir?", options: ["Çay", "Kahve türü", "Çikolata", "Meyve suyu"], correctAnswer: "Kahve türü" },
+                        { question: "Latte kelimesi neyi ifade eder?", options: ["Yoğun ve koyu kahve", "Sade kahve", "Süt ile yapılan hafif kahve", "Şekerli kahve"], correctAnswer: "Süt ile yapılan hafif kahve" },
+                        { question: "Kahve ağacı ilk olarak hangi yüzyılda keşfedildi?", options: ["15. yüzyıl", "17. yüzyıl", "19. yüzyıl", "21. yüzyıl"], correctAnswer: "15. yüzyıl" },
+                        { question: "Kahve filtresi nedir?", options: ["Ev eşyası", "Kahve türü", "Kahve demleme yöntemi", "Kahve makinesi"], correctAnswer: "Kahve demleme yöntemi" },
+                        { question: "Barista ne iş yapar?", options: ["Avukat", "Doktor", "Kahve uzmanı", "Şef"], correctAnswer: "Kahve uzmanı" },
+                        { question: "Flat White nedir?", options: ["Pizza çeşidi", "Kahve türü", "Çikolatalı tatlı", "Pasta çeşidi"], correctAnswer: "Kahve türü" },
+                        { question: "Cold Brew nedir?", options: ["Soğuk demlenmiş kahve", "Soğuk su içeceği", "Buzlu kahve", "Soğuk meyve suyu"], correctAnswer: "Soğuk demlenmiş kahve" }
+                    ];
+            
+                    let currentQuestionIndex = 0;
+                    let score = 0;
+            
+                    const questionElement = document.getElementById("question");
+                    const optionsContainer = document.getElementById("options-container");
+                    const nextButton = document.getElementById("next-button");
+                    const scoreElement = document.getElementById("score");
+            
+                    function showQuestion() {
+                        const currentQuestion = questions[currentQuestionIndex];
+                        questionElement.textContent = currentQuestion.question;
+                        
+                        optionsContainer.innerHTML = "";
+                        currentQuestion.options.forEach((option, index) => {
+                            const button = document.createElement("button");
+                            button.textContent = option;
+                            button.addEventListener("click", () => checkAnswer(option));
+                            optionsContainer.appendChild(button);
+                        });
+                    }
+            
+                    function checkAnswer(userAnswer) {
+                        const currentQuestion = questions[currentQuestionIndex];
+                        if (userAnswer === currentQuestion.correctAnswer) {
+                            score++;
+                        }
+            
+                        currentQuestionIndex++;
+                        if (currentQuestionIndex < questions.length) {
+                            showQuestion();
+                        } else {
+                            endQuiz();
+                        }
+                    }
+            
+                    function endQuiz() {
+                        questionElement.textContent = "Kahve Testi Tamamlandı!";
+                        optionsContainer.innerHTML = "";
+                        nextButton.style.display = "none";
+                        scoreElement.textContent = "Skor: " + score + " / " + questions.length;
+                    }
+            
+                    showQuestion();
+                </script>
             </div>
-        </section>
+        </section>        
+        
 
         <!-- Footer-->
         <footer class="footer text-faded text-center">
