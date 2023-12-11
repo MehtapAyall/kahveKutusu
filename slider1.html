@@ -81,7 +81,7 @@
                                 3'lü alımlarda avantajlı kahve kağıdı.
                             </p>
                             <span class="price mr-5">199.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Premium Filtre Kahve Kağıdı', 199.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                                 Sert kahve severlere özel avantaj paketi.
                             </p>
                             <span class="price mr-5">356.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Sert İçim Filtre Avantaj Paketi', 356.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                                klasik türk kahves severlere özel 10'lu avantaj paketi.
                             </p>
                             <span class="price mr-5">299.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Klasik Türk Kahvesi', 299.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -135,12 +135,20 @@
                                3'lü avantaj paketi ile filtre kahve severlere özel indirim. 
                             </p>
                             <span class="price mr-5">414.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Ekonomik Paket', 414.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>     
             </div>
         </section>  
+
+        <!-- Yandan Açılan Sepet Container -->
+        <div id="cart-container">
+            <h2>Sepetiniz</h2>
+            <ul id="cart-items"></ul>
+        </div>
+
+        <div id="cart-toggle" onclick="toggleCart()"><img src="assets/img/6496338.webp" style="width: 50px;" alt=""></div>
 
         <!-- Footer-->
         <footer class="footer text-faded text-center">

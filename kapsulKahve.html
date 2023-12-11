@@ -81,7 +81,7 @@
                                 Yoğun ve aromatik bir deneyim için Caffe Vergnano Espresso Intenso. Güçlü bir karakterle tanımlanan bu kahve, her fincanında zengin bir lezzet sunar.
                             </p>
                             <span class="price mr-5">109.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button>      
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Caffe Vergnano Espresso Intenso', 109.99)">Sepete Ekle</button>      
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                                 Kafeinsiz bir seçenek arayanlar için özel olarak hazırlanan Caffe Vergnano Espresso Decaf. Keyifli bir kahve deneyimi, kafeinsiz bir içecekle mümkün.
                             </p>
                             <span class="price mr-5">169.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Caffe Vergnano Espresso Decaf', 169.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                                 Kadifemsi bir dokunuşla hazırlanan Caffe Vergnano Espresso Cremoso, kahve tutkunlarına kremsi ve yoğun bir lezzet sunar.
                             </p>
                             <span class="price mr-5">176.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Caffe Vergnano Espresso Cremoso', 176.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -135,12 +135,20 @@
                                 Caffe Vergnano Espresso Arabica, özenle seçilmiş Arabica çekirdekleri ile hazırlanır. Hafif asiditesi ve özel kavurma tekniği ile benzersiz bir lezzet sunar.
                             </p>
                             <span class="price mr-5">209.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Caffe Vergnano Espresso Arabica', 209.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Yandan Açılan Sepet Container -->
+        <div id="cart-container">
+            <h2>Sepetiniz</h2>
+            <ul id="cart-items"></ul>
+        </div>
+
+        <div id="cart-toggle" onclick="toggleCart()"><img src="assets/img/6496338.webp" style="width: 50px;" alt=""></div>
 
         <!-- Footer-->
         <footer class="footer text-faded text-center">

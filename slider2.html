@@ -78,7 +78,7 @@
                                 <h5 class="dress-name"><b>Güllü Limonlu Lokum</b></h5>
                             </div>
                             <span class="price mr-5">89.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Güllü Limonlu Lokum', 89.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                                 <h5 class="dress-name"><b>Karışık Draje Metal Kutu</b></h5>
                             </div>
                             <span class="price mr-5">99.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Karışık Draje Metal Kutu', 99.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                                 <h5 class="dress-name"><b>Masterpieces Karışık Çikolata </b></h5>
                             </div>
                             <span class="price mr-5">65.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Masterpieces Karışık Çikolata', 65.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                                 <h5 class="dress-name"><b>Masterpieces Bitter Ganaj Tablet Çikolata</b></h5>
                             </div>
                             <span class="price mr-5">60.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Masterpieces Bitter Ganaj Tablet Çikolata', 60.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
@@ -138,12 +138,20 @@
                                 <h5 class="dress-name"><b>Fıstıklı Lokum - Tin Box</b></h5>
                             </div>
                             <span class="price mr-5">89.99 ₺</span>
-                            <button class="btn btn-warning add-to-cart-btn ml-5">Sepete Ekle</button> 
+                            <button class="btn btn-warning add-to-cart-btn ml-5" onclick="addToCart('Fıstıklı Lokum - Tin Box', 89.99)">Sepete Ekle</button> 
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Yandan Açılan Sepet Container -->
+        <div id="cart-container">
+            <h2>Sepetiniz</h2>
+            <ul id="cart-items"></ul>
+        </div>
+
+        <div id="cart-toggle" onclick="toggleCart()"><img src="assets/img/6496338.webp" style="width: 50px;" alt=""></div>
 
         <!-- Footer-->
         <footer class="footer text-faded text-center">
